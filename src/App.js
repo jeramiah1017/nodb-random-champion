@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Header from './components/Header'
+import Footer from './components/Footer'
+import routes from './routes';
+import Random from "./components/Random"
 
-function App() {
+class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+
+    }
+  }
+  render () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      {/* <Random /> */}
+      {routes}
+      <Footer />
     </div>
-  );
+  
+  )
+
+  } 
 }
 
 export default App;
